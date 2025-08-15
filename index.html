@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>News | Road Ops</title>
+  <meta name="description" content="Latest news for drivers and ops." />
+  <meta name="theme-color" content="#0a84ff" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230a84ff'/><text x='50' y='60' text-anchor='middle' font-size='54' fill='white' font-family='Arial'>R</text></svg>">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">News</h1>
+  </header>
+
+  <main class="container page-enter">
+    <section class="card">
+      <h2 class="card-title">Company Wins New Linehaul Contract</h2>
+      <p class="muted">Posted 15 Aug 2025</p>
+      <p>We’ve secured new nightly linehaul runs between SYD ↔ MEL. Driver EOIs open now.</p>
+      <a class="btn" href="#">Read update</a>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Fuel Levy Adjustment</h2>
+      <p class="muted">Effective 1 Sep 2025</p>
+      <p>Small levy tweak to reflect wholesale price changes. Details in payroll portal.</p>
+      <button class="btn-outline">View details</button>
+    </section>
+  </main>
+
+  <!-- Sticky mobile nav -->
+  <nav class="tabbar" aria-label="Primary">
+    <a class="tab" href="index.html" data-tab="news" aria-current="page"> 
+      <span class="ico" aria-hidden="true">${svg('news')}</span>
+      <span class="label">News</span>
+    </a>
+    <a class="tab" href="nhvr-updates.html" data-tab="nhvr">
+      <span class="ico" aria-hidden="true">${svg('shield')}</span>
+      <span class="label">NHVR</span>
+    </a>
+    <a class="tab" href="driver-room.html" data-tab="drivers">
+      <span class="ico" aria-hidden="true">${svg('users')}</span>
+      <span class="label">Driver Room</span>
+    </a>
+    <a class="tab" href="fuck-ups.html" data-tab="incidents">
+      <span class="ico" aria-hidden="true">${svg('warning')}</span>
+      <span class="label">Fuck Ups</span>
+    </a>
+    <a class="tab" href="shop.html" data-tab="shop">
+      <span class="ico" aria-hidden="true">${svg('cart')}</span>
+      <span class="label">Shop</span>
+    </a>
+    <a class="tab" href="contact.html" data-tab="contact">
+      <span class="ico" aria-hidden="true">${svg('mail')}</span>
+      <span class="label">Contact</span>
+    </a>
+  </nav>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+

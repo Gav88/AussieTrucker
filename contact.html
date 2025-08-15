@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Contact Us | Road Ops</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">Contact Us</h1>
+  </header>
+
+  <main class="container page-enter">
+    <form class="card form" action="#" method="post" onsubmit="event.preventDefault(); toast('Message sent'); this.reset();">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <section class="card">
+      <h3>Depot</h3>
+      <p>123 Logistics Dr, Sydney NSW</p>
+      <a class="btn-outline" href="tel:+611300000000">Call</a>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <a class="tab" href="index.html" data-tab="news">${svg('news')}<span class="label">News</span></a>
+    <a class="tab" href="nhvr-updates.html" data-tab="nhvr">${svg('shield')}<span class="label">NHVR</span></a>
+    <a class="tab" href="driver-room.html" data-tab="drivers">${svg('users')}<span class="label">Driver Room</span></a>
+    <a class="tab" href="fuck-ups.html" data-tab="incidents">${svg('warning')}<span class="label">Fuck Ups</span></a>
+    <a class="tab" href="shop.html" data-tab="shop">${svg('cart')}<span class="label">Shop</span></a>
+    <a class="tab" href="contact.html" data-tab="contact" aria-current="page">${svg('mail')}<span class="label">Contact</span></a>
+  </nav>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

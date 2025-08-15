@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Fuck Ups | Road Ops</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">Fuck Ups (Lessons Learned)</h1>
+  </header>
+
+  <main class="container page-enter">
+    <p class="muted">Share incidents anonymously to help everyone avoid repeats.</p>
+
+    <form class="card form" action="#" method="post" onsubmit="event.preventDefault(); toast('Thanks — submitted'); this.reset();">
+      <label for="when">When</label>
+      <input id="when" name="when" type="datetime-local" required />
+
+      <label for="where">Where</label>
+      <input id="where" name="where" type="text" placeholder="e.g., Hume Hwy SB km 124" required />
+
+      <label for="what">What happened</label>
+      <textarea id="what" name="what" rows="4" placeholder="Short description" required></textarea>
+
+      <label for="lesson">Lesson</label>
+      <textarea id="lesson" name="lesson" rows="3" placeholder="What to do differently next time" required></textarea>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <section class="stack">
+      <article class="card">
+        <h3>Forgot to check trailer air lines</h3>
+        <p class="muted">SYD DC · Last week</p>
+        <p>Quick pre-trip would have saved a callout. Add to departure checklist.</p>
+      </article>
+      <article class="card">
+        <h3>Dock rash on bay 3</h3>
+        <p class="muted">MEL Depot · 2 days ago</p>
+        <p>Approach angle too tight — use spotter cones and mirrors.</p>
+      </article>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <a class="tab" href="index.html" data-tab="news">${svg('news')}<span class="label">News</span></a>
+    <a class="tab" href="nhvr-updates.html" data-tab="nhvr">${svg('shield')}<span class="label">NHVR</span></a>
+    <a class="tab" href="driver-room.html" data-tab="drivers">${svg('users')}<span class="label">Driver Room</span></a>
+    <a class="tab" href="fuck-ups.html" data-tab="incidents" aria-current="page">${svg('warning')}<span class="label">Fuck Ups</span></a>
+    <a class="tab" href="shop.html" data-tab="shop">${svg('cart')}<span class="label">Shop</span></a>
+    <a class="tab" href="contact.html" data-tab="contact">${svg('mail')}<span class="label">Contact</span></a>
+  </nav>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+/* ===== Reset / base (mobile-first) ===== */
+:root {
+  --bg: #0b0c10;           /* app background */
+  --surface: #151821;      /* cards/nav */
+  --text: #e6eaf2;         /* primary text */
+  --muted: #9aa3b2;        /* secondary text */
+  --brand: #0a84ff;        /* accents */
+  --brand-2: #32d74b;      /* success */
+  --warn: #ff9f0a;         /* warning */
+  --danger: #ff453a;       /* error */
+  --radius: 16px;
+  --safe-bottom: env(safe-area-inset-bottom, 0);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Header ===== */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: linear-gradient(180deg, rgba(21,24,33,.9), rgba(21,24,33,.6));
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.app-title { margin: 0; padding: 14px 16px; font-size: 1.1rem; letter-spacing: .3px; }
+
+/* ===== Layout ===== */
+.container { padding: 16px; padding-bottom: calc(84px + var(--safe-bottom)); }
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.stack { display: grid; gap: 12px; }
+.grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.tile { background: var(--surface); border-radius: var(--radius); padding: 14px; border: 1px solid rgba(255,255,255,.06); text-decoration: none; color: var(--text); box-shadow: 0 4px 12px rgba(0,0,0,.25); transition: transform .2s ease, box-shadow .2s ease; }
+.tile:active { transform: scale(.98); box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+
+.card-title { margin: 0 0 6px; font-size: 1.05rem; }
+.muted { color: var(--muted); font-size: .9rem; margin: 2px 0 10px; }
+.price { font-weight: 700; margin: 8px 0; }
+
+/* ===== Buttons ===== */
+.btn, .btn-outline { appearance: none; border: none; border-radius: 999px; padding: 10px 14px; font-weight: 600; font-size: .95rem; }
+.btn { background: var(--brand); color: #06070a; box-shadow: 0 8px 18px rgba(10,132,255,.35); }
+.btn:active { transform: translateY(1px); }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,.18); }
+
+/* ===== Forms ===== */
+.form { display: grid; gap: 10px; }
+input, textarea { width: 100%; background: #0f1117; color: var(--text); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 12px; font-size: 16px; }
+label { font-size: .92rem; color: var(--muted); }
+
+/* ===== Sticky Tab Bar (mobile) ===== */
+.tabbar {
+  position: fixed; z-index: 40; left: 0; right: 0; bottom: 0;
+  height: 76px; padding-bottom: var(--safe-bottom);
+  display: grid; grid-template-columns: repeat(6, 1fr); align-items: center;
+  background: rgba(21,24,33,.92);
+  border-top: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: saturate(180%) blur(10px);
+}
+.tab { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none; color: var(--muted); font-size: .72rem; }
+.tab[aria-current="page"], .tab.active { color: var(--text); }
+.ico { width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; }
+.label { line-height: 1; }
+
+/* Active pill highlight */
+.tab.active::after, .tab[aria-current="page"]::after {
+  content: ""; width: 28px; height: 4px; border-radius: 999px; background: var(--brand);
+}
+
+/* ===== Page animations ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.page-enter { animation: fadeUp .35s ease-out both; }
+.card { animation: fadeUp .4s ease both; animation-delay: .05s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Larger phones & up */
+@media (min-width: 540px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .container { max-width: 720px; margin: 0 auto; } }
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Driver Room | Road Ops</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">Driver Room</h1>
+  </header>
+
+  <main class="container page-enter">
+    <section class="grid">
+      <a class="tile" href="#">
+        <h3>Roster</h3>
+        <p class="muted">See your upcoming shifts</p>
+      </a>
+      <a class="tile" href="#">
+        <h3>Training</h3>
+        <p class="muted">Modules & refreshers</p>
+      </a>
+      <a class="tile" href="#">
+        <h3>Docs</h3>
+        <p class="muted">Policies & forms</p>
+      </a>
+      <a class="tile" href="#">
+        <h3>Submit Leave</h3>
+        <p class="muted">Fast mobile form</p>
+      </a>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <a class="tab" href="index.html" data-tab="news">${svg('news')}<span class="label">News</span></a>
+    <a class="tab" href="nhvr-updates.html" data-tab="nhvr">${svg('shield')}<span class="label">NHVR</span></a>
+    <a class="tab" href="driver-room.html" data-tab="drivers" aria-current="page">${svg('users')}<span class="label">Driver Room</span></a>
+    <a class="tab" href="fuck-ups.html" data-tab="incidents">${svg('warning')}<span class="label">Fuck Ups</span></a>
+    <a class="tab" href="shop.html" data-tab="shop">${svg('cart')}<span class="label">Shop</span></a>
+    <a class="tab" href="contact.html" data-tab="contact">${svg('mail')}<span class="label">Contact</span></a>
+  </nav>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
